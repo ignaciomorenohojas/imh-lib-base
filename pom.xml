@@ -6,7 +6,7 @@
 
     <groupId>es.imh</groupId>
     <artifactId>imh-lib-base</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Ignacio Moreno Hojas Lib Base</description>
     <packaging>pom</packaging>
@@ -144,6 +144,14 @@
                         </path>
                     </annotationProcessorPaths>
                     <debug>true</debug>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <skipTests>${skipUnitTests}</skipTests>
                 </configuration>
             </plugin>
         </plugins>
